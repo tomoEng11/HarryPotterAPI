@@ -50,7 +50,6 @@ class ViewController: UIViewController, UICollectionViewDelegate {
             await self.datasource.apply(snapshot, animatingDifferences: true)
         }
         DLog()
-
     }
 }
 

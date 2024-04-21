@@ -17,7 +17,6 @@
 		BB8021C02BB9664B00997CD8 /* HarryPotterAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8021BF2BB9664B00997CD8 /* HarryPotterAPIUITests.swift */; };
 		BB8021C22BB9664B00997CD8 /* HarryPotterAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8021C12BB9664B00997CD8 /* HarryPotterAPIUITestsLaunchTests.swift */; };
 		BBB89D822BD36183006703C5 /* HPGroupInsetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB89D812BD36183006703C5 /* HPGroupInsetVC.swift */; };
-		BBB89D842BD3965C006703C5 /* AAa.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB89D832BD3965C006703C5 /* AAa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		BB8021BF2BB9664B00997CD8 /* HarryPotterAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterAPIUITests.swift; sourceTree = "<group>"; };
 		BB8021C12BB9664B00997CD8 /* HarryPotterAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBB89D812BD36183006703C5 /* HPGroupInsetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGroupInsetVC.swift; sourceTree = "<group>"; };
-		BBB89D832BD3965C006703C5 /* AAa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 				BB80219E2BB9664A00997CD8 /* AppDelegate.swift */,
 				BB8021A02BB9664A00997CD8 /* SceneDelegate.swift */,
 				BB8021A22BB9664A00997CD8 /* ViewController.swift */,
-				BBB89D832BD3965C006703C5 /* AAa.swift */,
 				BBB89D812BD36183006703C5 /* HPGroupInsetVC.swift */,
 				BB7BC0372BCE7D9F0015FB2C /* API.swift */,
 				BB8021A72BB9664B00997CD8 /* Assets.xcassets */,
@@ -264,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB8021A32BB9664A00997CD8 /* ViewController.swift in Sources */,
-				BBB89D842BD3965C006703C5 /* AAa.swift in Sources */,
 				BB80219F2BB9664A00997CD8 /* AppDelegate.swift in Sources */,
 				BB7BC0382BCE7D9F0015FB2C /* API.swift in Sources */,
 				BB8021A12BB9664A00997CD8 /* SceneDelegate.swift in Sources */,

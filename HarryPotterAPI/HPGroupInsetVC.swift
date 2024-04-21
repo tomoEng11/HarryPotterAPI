@@ -9,8 +9,21 @@ import UIKit
 
 class HPGroupInsetVC: UIViewController {
 
-    private enum Section {
-       case main
+    private enum Section: CaseIterable {
+       case Gryffindor, Slytherin, Hufflepuff, Ravenclaw
+
+        var houseName: String {
+            switch self {
+            case.Gryffindor:
+                return "Gryffindor"
+            case .Slytherin:
+                return "Slytherin"
+            case .Hufflepuff:
+                return "Hufflepuff"
+            case .Ravenclaw:
+                return "Ravenclaw"
+            }
+        }
     }
 
     private var collectionView: UICollectionView!
@@ -25,8 +38,14 @@ class HPGroupInsetVC: UIViewController {
         Task {
             items = await API.shared.getData()
             var snapshot = NSDiffableDataSourceSnapshot<Section, HPModel>()
-            snapshot.appendSections([.main])
-            snapshot.appendItems(items)
+            snapshot.appendSections(Section.allCases)
+
+            Section.allCases.forEach { section in
+                let itemsForSection = items.filter { $0.house == section.houseName }
+//                var sectionSnapshot = NSDiffableDataSourceSectionSnapshot<String>()
+                snapshot.appendItems(itemsForSection, toSection: section)
+//                sectionSnapshot.append([section.houseName], to: section.houseName)
+            }
             await dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
@@ -45,7 +64,7 @@ private extension HPGroupInsetVC {
 
         let headerRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, HPModel> { (cell, indexPath, item) in
             var content = cell.defaultContentConfiguration()
-            content.text = item.name
+            content.text = item.house
             cell.contentConfiguration = content
             //ここもう少し深掘りする
             cell.accessories = [.outlineDisclosure()]
@@ -53,7 +72,7 @@ private extension HPGroupInsetVC {
         let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, HPModel> { (cell, indexPath, item) in
 
             var content = cell.defaultContentConfiguration()
-            content.text = item.house
+            content.text = item.name
             cell.contentConfiguration = content
         }
 
